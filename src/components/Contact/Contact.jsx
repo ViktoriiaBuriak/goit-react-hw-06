@@ -2,7 +2,7 @@ import css from "./Contact.module.css";
 import { BsFillPersonFill } from "react-icons/bs";
 import { BsFillTelephoneFill } from "react-icons/bs";
 
-function Contact({ data: { id, name, number }, onDelete }) {
+function Contact({ contacts: { name, number, id }, onDelete }) {
   return (
     <>
       <div>

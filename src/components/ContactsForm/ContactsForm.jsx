@@ -4,9 +4,10 @@ import { nanoid } from "nanoid";
 import * as Yup from "yup";
 import { useDispatch } from "react-redux";
 
-import css from "./ContactForm.module.css";
+import css from "./ContactsForm.module.css";
+import { addContact } from "../../redux/contactsSlice";
 
-function ContactForm() {
+function ContactsForm() {
   const inicialValues = {
     name: "",
     number: "",
@@ -14,21 +15,20 @@ function ContactForm() {
 
   const dispatch = useDispatch();
 
-  const addContact = (formData) => {
+  const onAddContact = (formData) => {
     const newContact = {
       ...formData,
       id: nanoid(),
     };
-    const action = { type: "contactBox/ADD_CONTACT", payload: newContact };
 
-    dispatch(action);
+    dispatch(addContact(newContact));
   };
 
   const nameId = useId();
   const numberId = useId();
 
   const handleSubmit = (values, actions) => {
-    addContact(values)
+    onAddContact(values);
     actions.resetForm();
   };
 
@@ -80,4 +80,4 @@ function ContactForm() {
   );
 }
 
-export default ContactForm;
+export default ContactsForm;
