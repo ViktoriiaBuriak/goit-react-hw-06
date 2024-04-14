@@ -1,5 +1,5 @@
 import css from "./App.module.css";
-import ContactsForm from "./ContactsForm/ContactsForm";
+import ContactForm from "./ContactForm/ContactForm";
 import SearchBox from "./SearchBox/SearchBox";
 import ContactList from "./ContactList/ContactList";
 
@@ -8,7 +8,7 @@ function App() {
     <>
       <div className={css.phonebookContainer}>
         <h1 className={css.phonebookTitle}>Phonebook</h1>
-        <ContactsForm />
+        <ContactForm />
         <SearchBox />
         <ContactList />
       </div>

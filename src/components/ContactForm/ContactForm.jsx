@@ -4,10 +4,10 @@ import { nanoid } from "nanoid";
 import * as Yup from "yup";
 import { useDispatch } from "react-redux";
 
-import css from "./ContactsForm.module.css";
+import css from "./ContactForm.module.css";
 import { addContact } from "../../redux/contactsSlice";
 
-function ContactsForm() {
+function ContactForm() {
   const inicialValues = {
     name: "",
     number: "",
@@ -80,4 +80,4 @@ function ContactsForm() {
   );
 }
 
-export default ContactsForm;
+export default ContactForm;
